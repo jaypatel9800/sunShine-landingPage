@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+.nav{
+    min-height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+    align-items: baseline;
+    text-transform: capitalize;
+    font-size: small;
+    color: white;
+}
+.nav-list li{
+    padding: 0 30px;
+}
+.contact{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    background-color: white;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    padding: 15px 30px !important; 
+    border-radius: 40px;
+}
+.burger{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .burger{
+        display: block;
+    }  
+    .small-nav{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .nav-list{
+        display: none;
+    }
+    .nav-list li{
+        margin: 20px 0;
+    }
+    .contact{
+        background-color: hsl(51, 100%, 49%);
+    }
+    .toggle{
+        display: flex;
+        position: fixed;
+        margin: 60px 0 0 0;
+        background-color: white;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: hsl(212, 27%, 19%);
+    }
+}
+.homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+}
+.homepage h1{
+    font-family: 'Fraunces', serif;
+    color: white;
+    font-size: 45px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 60px 60px 30px 60px;
+    text-align: center;
+}
+
+@media screen and (max-width: 550px){
+    .homepage h1{
+        font-size: 35px;
+    }
+}
