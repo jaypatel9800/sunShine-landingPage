@@ -11,7 +11,9 @@ body {
   font-size: 18px;
   font-family: var(--barlow);
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .nav {
   min-height: 8vh;
   display: flex;
@@ -30,22 +32,33 @@ body {
   align-items: baseline;
   text-transform: capitalize;
   font-size: small;
-  color: white;
+  cursor: pointer;
 }
 .nav-list li {
   padding: 0 30px;
 }
-.contact {
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+}
+.contact{
   font-family: var(--francis);
   font-weight: 700;
   background-color: white;
-  color: hsl(212, 27%, 19%);
+  color: hsl(212, 27%, 19%) !important;
   text-transform: uppercase;
   padding: 15px 30px !important;
   border-radius: 40px;
+  transition: all 0.4s ease;
+}
+.contact:hover{
+    color: white !important;
+    background-color: #85d5fd;
+    letter-spacing: 3px;
 }
 .burger {
   display: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .burger {
@@ -63,7 +76,10 @@ body {
     display: none;
   }
   .nav-list li {
-    margin: 20px 0;
+    margin: 30px 0;
+  }
+  .nav-list li a{
+    color: hsl(212, 27%, 19%)   
   }
   .contact {
     background-color: hsl(51, 100%, 49%);
@@ -145,6 +161,14 @@ body {
   font-size: medium;
   font-weight: 900;
   text-transform: uppercase;
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+}
+.trans-text h2:hover{
+    text-decoration: underline solid hsl(51, 100%, 49%) 5px;
+}
+.standout-text h2:hover{
+    text-decoration: underline solid hsl(7, 99%, 70%) 5px;
 }
 .trans-img {
   grid-area: trans-img;
@@ -384,13 +408,25 @@ body {
     font-size: 13px;
     text-transform: capitalize;
 }
+.footer .head-icons h2, .footer .social-icons svg{
+    cursor: pointer;
+}
+.footer .head-icons h2 a{
+  text-decoration: none;
+  transition: all 0.4s ease-in;
+  color: #2C7566;
+}
+.footer .head-icons h2 a:hover{
+    color: white;
+}
 .footer .social-icons{
     width: 20%;
     display: flex;
     justify-content: space-evenly;
+    fill: #2C7566;
 }
-.footer .social-icons svg{
-    fill: brown;
+.footer .social-icons svg:hover{
+    fill: white;
 }
 
 @media screen and (max-width: 765px) {
